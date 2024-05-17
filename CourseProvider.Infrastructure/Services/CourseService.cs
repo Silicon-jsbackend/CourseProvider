@@ -14,13 +14,13 @@ public interface ICourseService
 {
     Task<Course> CreateCourseAsync(CourseCreateRequest request);
 
-    Task<Course> GetCourseByIdAsync(int id);
+    Task<Course> GetCourseByIdAsync(string id);
 
     Task<IEnumerable<Course>> GetCoursesAsync();
 
     Task<Course> UpdateCourseAsync(CourseUpdateRequest request);
 
-    Task<bool> DeleteCourseAsync(int id);
+    Task<bool> DeleteCourseAsync(string id);
 
 }
 
@@ -39,7 +39,7 @@ public class CourseService(IDbContextFactory<DataContext> contextFactory) : ICou
         return CourseFactory.Create(courseEntity);
     }
 
-    public async Task<bool> DeleteCourseAsync(int id)
+    public async Task<bool> DeleteCourseAsync(string id)
     {
         await using var context = _contextFactory.CreateDbContext();
 
@@ -55,7 +55,7 @@ public class CourseService(IDbContextFactory<DataContext> contextFactory) : ICou
         return true;
     }
 
-    public async Task<Course> GetCourseByIdAsync(int id)
+    public async Task<Course> GetCourseByIdAsync(string id)
     {
         await using var context = _contextFactory.CreateDbContext();
         var courseEntity = await context.Courses.FirstOrDefaultAsync(c => c.Id == id);

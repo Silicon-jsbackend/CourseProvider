@@ -8,23 +8,23 @@ namespace CourseProvider.Infrastructure.Models;
 
 public class CourseUpdateRequest
 {
-    public int Id { get; set; }
+    public string Id { get; set; }
     public string Title { get; set; } = null!;
     public decimal Price { get; set; }
     public decimal DiscountPrice { get; set; }
-    public int Hours { get; set; }
+    public decimal Hours { get; set; }
     public bool IsBestseller { get; set; }
     public decimal LikesInNumbers { get; set; }
     public decimal LikesInProcent { get; set; }
     public string? Author { get; set; }
     public string? ImageName { get; set; }
 
-    public int? CategoryId { get; set; }
-    public virtual CategoryUpdateEntity? Category { get; set; }
+    public string? CategoryId { get; set; }
+    public virtual CategoryUpdateModel? Category { get; set; }
 
-    public class CategoryUpdateEntity
+    public class CategoryUpdateModel
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string CategoryName { get; set; } = null!;
     }
 }

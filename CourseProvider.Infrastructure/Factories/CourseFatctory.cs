@@ -70,7 +70,7 @@ public static class CourseFactory
             Author = entity.Author,
             ImageName = entity.ImageName,
             CategoryId = entity.CategoryId,
-            Category = entity.Category != null ? new Course.CategoryEntity
+            Category = entity.Category != null ? new Course.CategoryModel
             {
                 Id = entity.Category.Id,
                 CategoryName = entity.Category.CategoryName

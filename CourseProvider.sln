@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseProvider", "CourseProvider\CourseProvider.csproj", "{9F510D53-DDAA-448D-A45A-87164FCBFA15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseProvider", "CourseProvider\CourseProvider.csproj", "{9F510D53-DDAA-448D-A45A-87164FCBFA15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseProvider.Test", "CourseProvider.Test\CourseProvider.Test.csproj", "{D6EA1661-8CFD-45E0-9DDF-E2CEEB6953CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseProvider.Test", "CourseProvider.Test\CourseProvider.Test.csproj", "{D6EA1661-8CFD-45E0-9DDF-E2CEEB6953CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseProvider.Infrastructure", "CourseProvider.Infrastructure\CourseProvider.Infrastructure.csproj", "{11F38CCE-6B6B-4264-8C72-02E367544DFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourseProvider.Infrastructure", "CourseProvider.Infrastructure\CourseProvider.Infrastructure.csproj", "{11F38CCE-6B6B-4264-8C72-02E367544DFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

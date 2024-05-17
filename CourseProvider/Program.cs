@@ -1,6 +1,7 @@
 using CourseProvider.Infrastructure.Data.Contexts;
-using CourseProvider.Infrastructure.GraphQL;
 using CourseProvider.Infrastructure.GraphQL.Mutations;
+using CourseProvider.Infrastructure.GraphQL.ObjectTypes;
+using CourseProvider.Infrastructure.GraphQL.Quaries;
 using CourseProvider.Infrastructure.Services;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,7 @@ var host = new HostBuilder()
         services.AddScoped<ICourseService, CourseService>();
 
         services.AddGraphQLFunction()
-                .AddQueryType<Query>()
+                .AddQueryType<CourseQuery>()
                 .AddMutationType<CourseMutation>()
                 .AddType<CourseType>();
 
