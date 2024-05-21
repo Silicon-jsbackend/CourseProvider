@@ -35,7 +35,11 @@ var host = new HostBuilder()
         var dbContext = scope.ServiceProvider.GetRequiredService<IDbContextFactory<DataContext>>();
         using var context = dbContext.CreateDbContext();
         context.Database.EnsureCreated();
+
+
     })
+
+
     .Build();
 
 host.Run();

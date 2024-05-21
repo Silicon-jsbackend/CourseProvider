@@ -11,7 +11,7 @@ namespace CourseProvider
         private readonly IGraphQLRequestExecutor _graphQLRequestExecutor = graphQLRequestExecutor;
 
         [Function("GraphQL")]
-        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post", Route = "graphql")] HttpRequest req)
+        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "graphql")] HttpRequest req)
         {
             return await _graphQLRequestExecutor.ExecuteAsync(req);
         }
